@@ -21,6 +21,7 @@
 // ==/UserScript==
 
 var color = "#DCDCDC";
+
 GM_addStyle(".content { color:" + color + ";}");
 GM_addStyle(".postbody { color:" + color + ";}");
 GM_addStyle(".postprofile { color:" + color + ";}");
