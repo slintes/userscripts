@@ -31,17 +31,17 @@ function removeCommunityPosts() {
   var elements, thisElement, i;
   
   elements = document.evaluate(
-	  "//div[starts-with(@id, 'update-') and .//a[starts-with(@href, 'communities/') and .//span]]",
-    document,
-    null,
-	  XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
-	  null
+  	"//div[starts-with(@id, 'update-') and .//a[starts-with(@href, 'communities/') and .//span]]",
+  	document,
+  	null,
+  	XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+  	null
   );
   
   for (i = 0; i < elements.snapshotLength; i++) {
-	  thisElement = elements.snapshotItem(i);
-	  //GM_log("removing community post with id='" + thisElement.id + "'.");
-	  thisElement.parentNode.removeChild(thisElement);
+  	thisElement = elements.snapshotItem(i);
+  	//GM_log("removing community post with id='" + thisElement.id + "'.");
+  	thisElement.parentNode.removeChild(thisElement);
   }
 }
 
