@@ -43,6 +43,7 @@ function removeCommunityPosts() {
   	//GM_log("removing community post with id='" + thisElement.id + "'.");
   	thisElement.parentNode.removeChild(thisElement);
   }
+
 }
 
 document.addEventListener("DOMNodeInserted", removeCommunityPosts, true);
